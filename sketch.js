@@ -24,7 +24,7 @@ const matrizPersonagem = [
     [220, 810],
     [440, 810],
     [660, 810],
-  ]
+]
 const matrizInimigo = [
     [0, 0],
     [104, 0],
@@ -54,13 +54,13 @@ const matrizInimigo = [
     [104, 624],
     [208, 624],
     [312, 624],
-    ]
+]
 
 function preload() {
     imgCenario = loadImage('assets/imagens/cenario/floresta.png');
     imgPersonagem = loadImage('assets/imagens/personagem/correndo.png');
     imgInimigo = loadImage('assets/imagens/inimigos/gotinha.png');
-    
+
     mscTheme = loadSound('assets/sons/trilha_jogo.mp3');
 }
 
@@ -68,8 +68,8 @@ function setup() {
     createCanvas(windowWidth, windowHeight);
 
     cenario = new Cenario(imgCenario, 3);
-    personagem = new Personagem(imgPersonagem);
-    inimigo = new Inimigo(matrizInimigo, imgInimigo, width - 52, 52,52, 104,104,3);
+    personagem = new Personagem(matrizPersonagem, imgPersonagem, 0, 110, 135, 220, 270);
+    inimigo = new Inimigo(matrizInimigo, imgInimigo, width - 52, 52, 52, 104, 104, 3);
     frameRate(30);
     // mscTheme.play();
     // mscTheme.loop();
